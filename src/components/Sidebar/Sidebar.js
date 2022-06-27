@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
+import { CgArrowsExchangeAlt } from "react-icons/cg";
 import {
     SDivider,
     SLink,
@@ -21,13 +22,11 @@ import { logoSVG } from "../../assets";
 
 import {
     AiOutlineApartment,
-    AiOutlineHome,
     AiOutlineLeft,
     AiOutlineSearch,
-    AiOutlineSetting,
+    AiOutlineAudit,
 } from "react-icons/ai";
-import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
-import { BsPeople } from "react-icons/bs";
+import { MdStorefront, MdDialpad, MdOutlineAnalytics } from "react-icons/md";
 
 import { ThemeContext } from "./../../App";
 import { useLocation } from "react-router-dom";
@@ -112,39 +111,46 @@ const Sidebar = () => {
 
 const linksArray = [
     {
-        label: "Home",
-        icon: <AiOutlineHome />,
+        label: "Swap",
+        icon: <CgArrowsExchangeAlt />,
         to: "/",
         notification: 0,
     },
     {
-        label: "Statistics",
-        icon: <MdOutlineAnalytics />,
+        label: "Farm",
+        icon: <MdStorefront />,
         to: "/statistics",
-        notification: 3,
+        notification: 0,
     },
     {
-        label: "Customers",
-        icon: <BsPeople />,
+        label: "Launchpad",
+        icon: <MdDialpad />,
         to: "/customers",
         notification: 0,
     },
     {
-        label: "Diagrams",
-        icon: <AiOutlineApartment />,
+        label: "NeoBit Statistics",
+        icon: <MdOutlineAnalytics />,
         to: "/diagrams",
-        notification: 1,
+        notification: 0,
     },
 ];
 
 const secondaryLinksArray = [
     {
-        label: "Settings",
-        icon: <AiOutlineSetting />,
+        label: "Contract",
+        to: "/diagrams",
+        icon: <AiOutlineAudit />,
     },
     {
-        label: "Logout",
-        icon: <MdLogout />,
+        label: "Audit",
+        to: "/diagrams",
+        icon: <AiOutlineAudit />,
+    },
+    {
+        label: "Whitepaper",
+        to: "/diagrams",
+        icon: <AiOutlineAudit />,
     },
 ];
 
